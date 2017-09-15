@@ -112,3 +112,25 @@ html {
         }
     }
 }
+.userinfo-header{
+    width: 100%;
+    height: 27.26667rem;
+    background: url(/static/img/userinfobanner.jpg) center center no-repeat;
+    background-size: 100% auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    img{
+        border-radius:50%;
+        width: 30%;
+    }
+}

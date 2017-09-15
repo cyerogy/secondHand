@@ -27,11 +27,22 @@
                 </mt-tab-container>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab4">
+                <div class="userinfo-header">
+                    <img src="/static/img/bg-avatar.png"/>
+                </div>
+                <div class="div-bgcolor " style="margin-top:0px ">
+                    <div><a>资料完善</a></div>
+                    <div><a>签到有礼</a></div>
+                </div>
+                <div class="div-bgcolor ">
+                    <div><a>我的消息</a></div>
+                    <div><a>我的收藏</a></div>
+                </div>
                 <div class="div-bgcolor">
-                    <div><i class="iconfont">&#xe649;</i><a>帮助中心</a></div>
-                    <div><i class="iconfont">&#xe649;</i><a>我要反馈</a></div>
-                    <div><i class="iconfont">&#xe649;</i><a>请赐我评分吧</a></div>
-                    <div><i class="iconfont">&#xe649;</i><a>设置</a></div>
+                    <div><a>帮助中心</a></div>
+                    <div><a>我要反馈</a></div>
+                    <div><a>请赐我评分吧</a></div>
+                    <div><a>设置</a></div>
                 </div>
             </mt-tab-container-item>
         </mt-tab-container>
