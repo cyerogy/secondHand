@@ -22,6 +22,15 @@ const router = new Router({
       },
       component: resolve =>
                 require(["../containers/Index/Sell.vue"], resolve)
+    },
+    {
+      path: '/Index/Address',
+      name: 'address',
+      meta: {
+          title: "我的位置"
+      },
+      component: resolve =>
+                require(["../containers/User/Address.vue"], resolve)
     }
   ]
 })

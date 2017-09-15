@@ -31,18 +31,19 @@
                     <img src="/static/img/bg-avatar.png"/>
                 </div>
                 <div class="div-bgcolor " style="margin-top:0px ">
-                    <div><a>资料完善</a></div>
-                    <div><a>签到有礼</a></div>
+                    <div>资料完善</div>
+                    <div>签到有礼</div>
                 </div>
                 <div class="div-bgcolor ">
-                    <div><a>我的消息</a></div>
-                    <div><a>我的收藏</a></div>
+                    <div>我的消息</div>
+                    <div>我的收藏</div>
+                    <div @click="gotoAddress()">常用地址</div>
                 </div>
                 <div class="div-bgcolor">
-                    <div><a>帮助中心</a></div>
-                    <div><a>我要反馈</a></div>
-                    <div><a>请赐我评分吧</a></div>
-                    <div><a>设置</a></div>
+                    <div>帮助中心</div>
+                    <div>我要反馈</div>
+                    <div>请赐我评分吧</div>
+                    <div>设置</div>
                 </div>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -85,8 +86,8 @@
             gotosell(){
                 this.$router.push("/Index/Sell");
             },
-            selectTable(type){
-                console.log(type)
+            gotoAddress(){
+                this.$router.push("/Index/Address");
             }
         }
     }

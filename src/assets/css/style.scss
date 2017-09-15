@@ -107,9 +107,7 @@ html {
         padding:15px 0px 15px 30px;
         border-bottom:1px solid #999 !important;
         text-align:left;
-        a{
-            @include font-dpr(35px);
-        }
+        @include font-dpr(35px);
     }
 }
 .userinfo-header{
@@ -133,4 +131,9 @@ html {
         border-radius:50%;
         width: 30%;
     }
+}
+.span-div{
+    text-align:left;
+    padding:15px 0px 15px 30px;
+    @include font-dpr(35px);
 }
