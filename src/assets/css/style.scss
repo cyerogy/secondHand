@@ -1,0 +1,114 @@
+@import './var.scss';
+@import './mixin.scss';
+
+// reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @include font-dpr(30px);
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-select: none;
+    line-height: 1.6;
+    font-family: $fontStack;
+    color: $fontColor;
+    word-break: break-all;
+    box-sizing: border-box;
+    background-color: $commonBackground;
+    @include font-dpr(14px);
+    // width: 100%;
+    // overflow-x: hidden;
+}
+html {
+    min-height: 100%;
+}
+.header-button {
+    width:50%;
+    float:left;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: $whiteColor;
+}
+// 排序结束
+.save-button {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16rem/$base 54rem/$base;
+    background-color: $whiteColor;
+    box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
+}
+//组件样式修改
+.mint-tabbar{
+    height:100px !important;
+    background-color:$whiteColor !important;
+    box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
+    .mint-tab-item{
+        .mint-tab-item-label{
+            @include font-dpr(30px);
+            line-height:80px !important;
+        }
+    }
+    .is-selected{
+        background-color:$whiteColor !important;
+        border-bottom:5px solid #07c4ac;
+        color:#000 !important;
+        .mint-tab-item-label{
+            font-weight:bloder !important
+        }
+    }
+}
+
+.mint-searchbar{
+    height:100px;
+    .mint-searchbar-inner{
+        height:70px;
+    }
+}
+
+.mint-navbar{
+    height:90px !important;
+    background-color:$whiteColor !important;
+    box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
+    .mint-tab-item{
+        .mint-tab-item-label{
+            @include font-dpr(30px);
+            line-height:60px !important;
+        }
+    }
+    .is-selected{
+        background-color:$whiteColor !important;
+        border-bottom:5px solid #07c4ac !important;
+        color:#000 !important;
+        .mint-tab-item-label{
+            font-weight:bloder !important
+        }
+    }
+}
+//首页样式
+.div-bgcolor{
+    margin-top:30px;
+    background-color:$whiteColor;
+    div{
+        padding:15px 0px 15px 30px;
+        border-bottom:1px solid #999 !important;
+        text-align:left;
+        a{
+            @include font-dpr(35px);
+        }
+    }
+}
