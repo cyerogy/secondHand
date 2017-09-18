@@ -8,7 +8,7 @@ import './assets/css/style.scss'
 import 'mint-ui/lib/style.css'
 Vue.prototype.axios = axios
 Vue.config.productionTip = false
-
+Vue.config.debug = true
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

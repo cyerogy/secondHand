@@ -1,6 +1,7 @@
 <template>
     <div class="sellproductinfo">
         <div class="exam-button">
+            <klf-input v-model="category" placeholder="分类" @blur="nameCheck" @focus="nameFocus"></klf-input>
             <klf-input v-model="name" placeholder="产品名称" @blur="nameCheck" @focus="nameFocus"></klf-input>
             <klf-input v-model="price" placeholder="产品价格" @blur="nameCheck" @focus="nameFocus"></klf-input>
             <klf-input format="textarea" v-model="des" placeholder="产品介绍" @blur="nameCheck" @focus="nameFocus"></klf-input>
@@ -19,6 +20,7 @@
         components:{KlfInput,KlfUpload,KlfButton},
         data(){
             return {
+                category:'',
                 name:'',
                 des:'',
                 price:'',

@@ -24,7 +24,25 @@ const router = new Router({
                 require(["../containers/Index/Sell.vue"], resolve)
     },
     {
-      path: '/Index/Address',
+      path: '/Product/Info',
+      name: 'productinfo',
+      meta: {
+          title: "产品详细信息"
+      },
+      component: resolve =>
+                require(["../containers/Product/Info.vue"], resolve)
+    },
+    {
+      path: '/Index/List',
+      name: 'list',
+      meta: {
+          title: "产品列表信息"
+      },
+      component: resolve =>
+                require(["../containers/Index/List.vue"], resolve)
+    },
+    {
+      path: '/User/Address',
       name: 'address',
       meta: {
           title: "我的位置"

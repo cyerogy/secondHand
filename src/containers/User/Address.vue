@@ -11,11 +11,9 @@
 <script>
     //import BMap from '@/components/BMapComponent'
     import QMap from '@/components/QMapComponent'
-    //import GMap from '@/components/GMapComponent'
     export default {
         //components:{BMap},
         components:{QMap},
-        //components:{GMap},
         data(){
             return {
                 list:[]

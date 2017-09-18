@@ -2,7 +2,14 @@
     <div class="index">
         <mt-tab-container class="page-tabbar-container" v-model="selected">
             <mt-tab-container-item id="tab1">
-                <div class="header-button"><klf-button name="买" type="default"></klf-button></div>
+                <div class="Index-swipe">
+                    <mt-swipe :auto="4000">
+                        <mt-swipe-item>1</mt-swipe-item>
+                        <mt-swipe-item>2</mt-swipe-item>
+                        <mt-swipe-item>3</mt-swipe-item>
+                    </mt-swipe>
+                </div>
+                <div class="header-button"><klf-button name="买" type="default" @click="gotoList()"></klf-button></div>
                 <div class="header-button">
                     <klf-button name="卖" @click="gotosell()"></klf-button>
                 </div>
@@ -65,7 +72,7 @@
 </template>
 <script>
     import KlfButton from '@/components/KlfButton'
-    import { Tabbar, TabItem,TabContainer,TabContainerItem,Search,Navbar } from 'mint-ui'
+    import { Tabbar, TabItem,TabContainer,TabContainerItem,Search,Navbar,Swipe, SwipeItem } from 'mint-ui'
     import Vue from 'vue'
     Vue.component(Tabbar.name, Tabbar);
     Vue.component(TabItem.name, TabItem);
@@ -73,6 +80,8 @@
     Vue.component(TabContainerItem.name, TabContainerItem);
     Vue.component(Search.name, Search);
     Vue.component(Navbar.name, Navbar);
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
     export default {
         components:{KlfButton},
         data(){
@@ -87,7 +96,10 @@
                 this.$router.push("/Index/Sell");
             },
             gotoAddress(){
-                this.$router.push("/Index/Address");
+                this.$router.push("/User/Address");
+            },
+            gotoList(){
+                this.$router.push("/Index/List");
             }
         }
     }
