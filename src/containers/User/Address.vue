@@ -1,6 +1,6 @@
 <template>
     <div class="address">
-        <b-map :mapHeight="800" :addressList="list"></b-map>
+        <q-map :mapHeight="800" :addressList="list"></q-map>
         <div class="span-div">您附近的标志性建筑：</div>
         <div class="div-bgcolor " style="margin-top:0px ">
             <div v-if="list.length > 0" v-for="(item, index) in list">{{ item.title }}</div>
@@ -9,9 +9,13 @@
     </div>
 </template>
 <script>
-    import BMap from '@/components/BMapComponent'
+    //import BMap from '@/components/BMapComponent'
+    import QMap from '@/components/QMapComponent'
+    //import GMap from '@/components/GMapComponent'
     export default {
-        components:{BMap},
+        //components:{BMap},
+        components:{QMap},
+        //components:{GMap},
         data(){
             return {
                 list:[]
