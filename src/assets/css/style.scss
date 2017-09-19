@@ -91,15 +91,8 @@ li{
 }
 
 .mint-navbar{
-    height:10rem/$base !important;
     background-color:$whiteColor !important;
     box-shadow: 0 0 20rem/$base rgba(15, 3, 4, .1);
-    .mint-tab-item{
-        .mint-tab-item-label{
-            @include font-dpr(14px);
-            line-height:1rem/$base !important;
-        }
-    }
     .is-selected{
         background-color:$whiteColor !important;
         border-bottom:5px solid #07c4ac !important;
@@ -251,19 +244,10 @@ li{
 /*产品详情页面*/
 .productinfo-swipe{
     height: 80rem/$base;
-    .mint-tab-item{
-        .mint-tab-item-label{
-            @include font-dpr(14px);
-            line-height:1rem/$base !important;
-        }
-    }
 }
 .productinfo-content{
     margin-top:2rem/$base;
     box-shadow: 0px 0px 0px #fff;
-}
-.message-info{
-    
 }
 .message-title{
     padding-left: 4rem/$base;
