@@ -38,19 +38,19 @@
                     <img src="/static/img/bg-avatar.png"/>
                 </div>
                 <div class="div-bgcolor " style="margin-top:0px ">
-                    <div>资料完善</div>
-                    <div>签到有礼</div>
+                    <div class="basic-css" @click="gotoUser()">资料完善</div>
+                    <div class="basic-css">签到有礼</div>
                 </div>
                 <div class="div-bgcolor ">
-                    <div>我的消息</div>
-                    <div>我的收藏</div>
-                    <div @click="gotoAddress()">常用地址</div>
+                    <div class="basic-css" @click="gotoMessage()">我的消息</div>
+                    <div class="basic-css">我的收藏</div>
+                    <div class="basic-css" @click="gotoAddress()">常用地址</div>
                 </div>
                 <div class="div-bgcolor">
-                    <div>帮助中心</div>
-                    <div>我要反馈</div>
-                    <div>请赐我评分吧</div>
-                    <div>设置</div>
+                    <div class="basic-css">帮助中心</div>
+                    <div class="basic-css" @click="gotoFeedback()">我要反馈</div>
+                    <div class="basic-css">请赐我评分吧</div>
+                    <div class="basic-css">设置</div>
                 </div>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -74,6 +74,7 @@
     import KlfButton from '@/components/KlfButton'
     import { Tabbar, TabItem,TabContainer,TabContainerItem,Search,Navbar,Swipe, SwipeItem } from 'mint-ui'
     import Vue from 'vue'
+    import store from '@/store/store'
     Vue.component(Tabbar.name, Tabbar);
     Vue.component(TabItem.name, TabItem);
     Vue.component(TabContainer.name, TabContainer);
@@ -86,10 +87,13 @@
         components:{KlfButton},
         data(){
             return {
-                selected:'tab1',
+                selected:store.index_select_id,
                 search_key:'',
                 orderselected:"1"
             }
+        },
+        created(){
+            console.log(this)
         },
         methods:{
             gotosell(){
@@ -100,6 +104,20 @@
             },
             gotoList(){
                 this.$router.push("/Index/List");
+            },
+            gotoUser(){
+                this.$router.push("/User/Info");
+            },
+            gotoFeedback(){
+                this.$router.push("/User/Feedback");
+            },
+            gotoMessage(){
+                this.$router.push("/User/Message");
+            }
+        },
+        watch: {
+            selected(new_val,old_val){
+                this.store.index_select_id = new_val;
             }
         }
     }

@@ -89,17 +89,17 @@
 		// margin: 0 0 30rem/$base 0;
 	}
 	.input + .input {
-		margin:30rem/$base  0 0  0;
+		margin:4rem/$base  0 0  0;
 	}
 	.input input{
 		-webkit-appearance:none;
 		width: 100%;
 		border: none;
-		height: 88rem/$base;
-		background: $whiteColor;
+		height: 10rem/$base;
+		background: $whiteColor;;
 		box-shadow: none;
-		@include font-dpr(40px);
-		padding: 0 35rem/$base;
+		@include font-dpr(14px);
+		padding: 0 5rem/$base;
 	}
 	.input textarea {
 		width: 100%;
@@ -107,9 +107,9 @@
 		border: 1px solid #ccc;
 		background: $whiteColor;
 		font-family: $fontStack;
-		@include font-dpr(40px);
+		@include font-dpr(14px);
 		height: 100%;
 		resize: none;
-		padding: 0 35rem/$base;
+		padding: 0 5rem/$base;
 	}
 </style>

@@ -1,9 +1,9 @@
 <template>
     <div class="address">
-        <q-map :mapHeight="800" :addressList="list"></q-map>
+        <q-map :mapHeight="300" :addressList="list"></q-map>
         <div class="span-div">您附近的标志性建筑：</div>
         <div class="div-bgcolor " style="margin-top:0px ">
-            <div v-if="list.length > 0" v-for="(item, index) in list">{{ item.title }}</div>
+            <div class="basic-css" v-if="list.length > 0" v-for="(item, index) in list">{{ item.title }}</div>
             <div v-if="list.length == 0">定位中</div>
         </div>
     </div>

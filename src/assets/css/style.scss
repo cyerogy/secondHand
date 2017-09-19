@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    @include font-dpr(30px);
+    @include font-dpr(14px);
 }
 html,
 body {
@@ -46,11 +46,11 @@ li{
     float:left;
     left: 0;
     right: 0;
-    margin-top: 20px;
+    margin-top: 2rem/$base;
     background-color: $whiteColor;
 }
 .Index-swipe{
-    height:500px;
+    height:60rem/$base;
 }
 // 排序结束
 .save-button {
@@ -58,19 +58,19 @@ li{
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 16rem/$base 54rem/$base;
+    padding: 2rem/$base 2rem/$base;
     background-color: $whiteColor;
-    box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
+    box-shadow: 0 0 10rem/$base rgba(15, 3, 4, .1);
 }
 //组件样式修改
 .mint-tabbar{
-    height:100px !important;
+    height:12rem/$base !important;
     background-color:$whiteColor !important;
     box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
     .mint-tab-item{
         .mint-tab-item-label{
-            @include font-dpr(30px);
-            line-height:80px !important;
+            @include font-dpr(14px);
+            line-height:8rem/$base !important;
         }
     }
     .is-selected{
@@ -84,20 +84,20 @@ li{
 }
 
 .mint-searchbar{
-    height:100px;
+    height:12rem/$base;
     .mint-searchbar-inner{
-        height:70px;
+        height:8rem/$base;
     }
 }
 
 .mint-navbar{
-    height:90px !important;
+    height:10rem/$base !important;
     background-color:$whiteColor !important;
-    box-shadow: 0 0 43rem/$base rgba(15, 3, 4, .1);
+    box-shadow: 0 0 20rem/$base rgba(15, 3, 4, .1);
     .mint-tab-item{
         .mint-tab-item-label{
-            @include font-dpr(30px);
-            line-height:60px !important;
+            @include font-dpr(14px);
+            line-height:1rem/$base !important;
         }
     }
     .is-selected{
@@ -111,18 +111,18 @@ li{
 }
 //首页样式
 .div-bgcolor{
-    margin-top:30px;
+    margin-top:2rem/$base;
     background-color:$whiteColor;
-    div{
-        padding:15px 0px 15px 30px;
-        border-bottom:1px solid #999 !important;
+    div.basic-css{
+        padding:2rem/$base 0px 2rem/$base 5rem/$base;
+        border-bottom:1px solid #ccc;
         text-align:left;
-        @include font-dpr(35px);
+        @include font-dpr(14px);
     }
 }
 .userinfo-header{
     width: 100%;
-    height: 27.26667rem;
+    height: 40rem/$base;
     background: url(/static/img/userinfobanner.jpg) center center no-repeat;
     background-size: 100% auto;
     display: -webkit-box;
@@ -145,7 +145,7 @@ li{
 .span-div{
     text-align:left;
     padding:15px 0px 15px 30px;
-    @include font-dpr(35px);
+    @include font-dpr(14px);
 }
 .product-info{
     width:50%;
@@ -165,7 +165,7 @@ li{
     background-color:#fff;
     overflow-x: scroll;
     -webkit-overflow-x: scroll;
-    height:100px;
+    height:10rem/$base;
 }
 .sortMenu::-webkit-scrollbar{
     width: 0;
@@ -179,10 +179,10 @@ li{
 }
 .sortMenu .cell{
     display: inline-block;
-    @include font-dpr(35px);
+    @include font-dpr(14px);
     margin: 0px 1em;
-    height: 100px;
-    line-height: 100px;
+    height: 10rem/$base;
+    line-height: 10rem/$base;
     text-align: center;
     position: relative;
     text-overflow: ellipsis;
@@ -202,34 +202,27 @@ li{
 .sortMenu .all{
     right: 0;
     top: 0;
-    height: 35px;
-    width: 35px;
     position: absolute;
-    background: #fff;
     z-index: 10;
-    display: flex;
     justify-content:center;
-    align-items:center;
-}
-.sortMenu .all:before{
-    content: '';
-    height: 25px;
-    width: 1px;
-    position: absolute;
-
-    left: 0px;
-}
-.sortMenu .all{
+    text-align:center;
     display: block;
     width: 10%;
     box-shadow: 10px 0px 10px #888888;
     background: #fff;
-    height: 100px;
-    line-height: 100px;
+    height: 10rem/$base;
+    line-height: 10rem/$base;
+}
+.sortMenu .all:before{
+    content: '';
+    height: 10rem/$base;
+    width: 1px;
+    position: absolute;
+    left: 0px;
 }
 .sortMenu .pull-down{
     position: absolute;
-    top: 100px;
+    top: 10rem/$base;
     height:auto;
     width: 100%;
     background: #fff;
@@ -247,7 +240,7 @@ li{
 }
 .pull-down-sort li{
     float: left;
-    padding: 20px;
+    padding: 2rem/$base;
 }
 .pull-down-sort li a:hover{
     color: #ff474c;
@@ -257,9 +250,44 @@ li{
 }
 /*产品详情页面*/
 .productinfo-swipe{
-    height:700px;
+    height: 80rem/$base;
+    .mint-tab-item{
+        .mint-tab-item-label{
+            @include font-dpr(14px);
+            line-height:1rem/$base !important;
+        }
+    }
 }
 .productinfo-content{
-    margin-top:20px;
+    margin-top:2rem/$base;
     box-shadow: 0px 0px 0px #fff;
+}
+.message-info{
+    
+}
+.message-title{
+    padding-left: 4rem/$base;
+    text-align:left;
+    @include font-dpr(14px);
+    font-weight:bold;
+    height:6rem/$base;
+    .message-span{
+        line-height:6rem/$base;
+        float:right;
+        padding-right:2rem/$base;
+        font-weight:normal;
+    }
+}
+.message-content{
+    margin-top:2rem/$base;
+    text-align:left;
+    padding-left:4rem/$base;
+    @include font-dpr(14px);
+}
+.message-foot{
+    height:6rem/$base;
+    a,span{
+        float:right;
+        padding-right:5rem/$base;
+    }
 }

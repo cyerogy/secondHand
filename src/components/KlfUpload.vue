@@ -14,15 +14,16 @@
 @import '../assets/css/mixin.scss';
 .upload-file{
 	position:relative;
-    width: 182rem/$base;
-    height: 182rem/$base;
-    line-height: 182rem/$base;
-    margin-right: 20rem/$base;
-    margin-top: 20rem/$base;
+    width: 20rem/$base;
+    height: 20rem/$base;
+    line-height: 18rem/$base;
+    margin-right: 5rem/$base;
+    margin-top: 5rem/$base;
     overflow: hidden;
     text-overflow: ellipsis;
     border: 2px dashed $borderColor;
     background-color: $whiteColor;
+    text-align:center
 }
 .upload-file a p i{
 	@include font-dpr(50px);

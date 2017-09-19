@@ -23,9 +23,9 @@
 	}
 	div>button{
 		width: 100%;
-		height: 88rem/$base;
+		height: 10rem/$base;
 		border: none;
-		@include font-dpr(58px);
+		@include font-dpr(18px);
 		color: #fff;
 	}
 	div:active>button{

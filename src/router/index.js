@@ -49,6 +49,33 @@ const router = new Router({
       },
       component: resolve =>
                 require(["../containers/User/Address.vue"], resolve)
+    },
+    {
+      path: '/User/Info',
+      name: 'userinfo',
+      meta: {
+          title: "个人信息"
+      },
+      component: resolve =>
+                require(["../containers/User/Info.vue"], resolve)
+    },
+    {
+      path: '/User/Feedback',
+      name: 'userfeedback',
+      meta: {
+          title: "我要反馈"
+      },
+      component: resolve =>
+                require(["../containers/User/Feedback.vue"], resolve)
+    },
+    {
+      path: '/User/Message',
+      name: 'Message',
+      meta: {
+          title: "我的消息"
+      },
+      component: resolve =>
+                require(["../containers/User/Message.vue"], resolve)
     }
   ]
 })

@@ -2,7 +2,7 @@
     <div class="list">
 		<klf-scroll></klf-scroll>
         <div class="div-bgcolor ">
-            <div @click="gotoInfo()">商品详情</div>
+            <div class="basic-css" @click="gotoInfo()">商品详情</div>
         </div>
     </div>
 </template>
