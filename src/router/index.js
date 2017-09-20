@@ -76,6 +76,15 @@ const router = new Router({
       },
       component: resolve =>
                 require(["../containers/User/Message.vue"], resolve)
+    },
+    {
+      path: '/User/Product',
+      name: 'userproduct',
+      meta: {
+          title: "我的产品"
+      },
+      component: resolve =>
+                require(["../containers/User/Product.vue"], resolve)
     }
   ]
 })

@@ -9,9 +9,9 @@
                         <mt-swipe-item>3</mt-swipe-item>
                     </mt-swipe>
                 </div>
-                <div class="header-button"><klf-button name="买" type="default" @click="gotoList()"></klf-button></div>
+                <div class="header-button"><klf-button name="我是买家" type="default" @click="gotoList()"></klf-button></div>
                 <div class="header-button">
-                    <klf-button name="卖" @click="gotosell()"></klf-button>
+                    <klf-button name="我是卖家" @click="gotosell()"></klf-button>
                 </div>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab2">
@@ -38,19 +38,19 @@
                     <img src="/static/img/bg-avatar.png"/>
                 </div>
                 <div class="div-bgcolor " style="margin-top:0px ">
-                    <div class="basic-css" @click="gotoUser()">资料完善</div>
-                    <div class="basic-css">签到有礼</div>
+                    <div class="basic-css" @click="gototransaction()">我的交易</div>
+                    <div class="basic-css">签到有礼（暂未开通）</div>
                 </div>
                 <div class="div-bgcolor ">
                     <div class="basic-css" @click="gotoMessage()">我的消息</div>
-                    <div class="basic-css">我的收藏</div>
+                    <div class="basic-css">我的收藏（暂未开通）</div>
                     <div class="basic-css" @click="gotoAddress()">常用地址</div>
                 </div>
                 <div class="div-bgcolor">
-                    <div class="basic-css">帮助中心</div>
+                    <div class="basic-css">帮助中心（暂未开通）</div>
                     <div class="basic-css" @click="gotoFeedback()">我要反馈</div>
-                    <div class="basic-css">请赐我评分吧</div>
-                    <div class="basic-css">设置</div>
+                    <div class="basic-css">请赐我评分吧（暂未开通）</div>
+                    <div class="basic-css">设置（暂未开通）</div>
                 </div>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -93,7 +93,6 @@
             }
         },
         created(){
-            console.log(this)
         },
         methods:{
             gotosell(){
@@ -105,8 +104,8 @@
             gotoList(){
                 this.$router.push("/Index/List");
             },
-            gotoUser(){
-                this.$router.push("/User/Info");
+            gototransaction(){
+                this.$router.push("/User/Product");
             },
             gotoFeedback(){
                 this.$router.push("/User/Feedback");
