@@ -1,6 +1,6 @@
 <template>
     <div class="messageinfo">
-        <div class="div-bgcolor" v-for="(item, index) in messagelist" style="margin-top:5px">
+        <div class="div-bgcolor" v-for="(item, index) in messagelist">
             <div class="message-info">
                 <div class="message-title">{{ item.title }}<span class="message-span">2017-09-11 10:50:10</span></div>
                 <div class="message-content">{{ item.content }}</div>
@@ -9,9 +9,13 @@
                     <a v-if="item.is_reply == 0" @click="showReply(index)">回复</a>
                     <span v-if="item.is_reply == 2">已回复</span>
                 </div>
-                <div v-if="item.is_reply == 1">
-                    <klf-input format="textarea" v-model="item.reply_content" placeholder="回复内容" @blur="nameCheck" @focus="nameFocus"></klf-input>
-                    <klf-button v-if="item.is_reply == 1" name="回复" @click="saveInfo(index)"></klf-button>
+                <div v-if="item.is_reply == 1" class="reply-info">
+                    <klf-input format="textarea" v-model="item.reply_content" placeholder="回复内容"></klf-input>
+                    <div class="message-button">
+                        <a class="a-confirm-button" href="javascript:void(0)" @click="saveInfo(index)">回复</a>
+                        <a class="a-cancel-button" href="javascript:void(0)" @click="cancelInfo(index)">取消</a>
+                    </div>
+                    <div style="clear: both"></div>
                 </div>
             </div>
         </div>
@@ -37,6 +41,9 @@
             },
             saveInfo(index){
                 this.messagelist[index].is_reply = 2;
+            },
+            cancelInfo(index){
+                this.messagelist[index].is_reply = 0;
             }
         }
     }

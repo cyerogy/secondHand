@@ -37,6 +37,10 @@ html {
 a{
     text-decoration: none;
     color:#000;
+    border-radius: 4px;
+    text-align:center;
+    display:block;
+    min-width:10rem/$base
 }
 li{
     list-style-type:none;
@@ -274,4 +278,24 @@ li{
         float:right;
         padding-right:5rem/$base;
     }
+}
+.message-button{
+    float:right;
+    a{
+        float:left;
+    }
+    .a-cancel-button{
+        margin-left:20px;
+    }
+}
+.reply-info{
+    padding:15px 15px 15px 15px;
+}
+.a-confirm-button{
+    background-color:#07c4ac;
+    color:#fff;
+    text-align:center;
+}
+.a-cancel-button{
+    border:1px solid #333;
 }
