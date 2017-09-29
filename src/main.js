@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import store from './store/store'
+import apisocket from './store/apisocket'
 import 'mint-ui/lib/style.css'
 import './assets/css/style.scss'
 import 'lib-flexible'
@@ -12,6 +13,7 @@ import 'core-js'
 import qs from 'qs'
 Vue.prototype.axios = axios
 Vue.prototype.store = store
+Vue.prototype.apisocket = apisocket
 if (process.env.NODE_ENV === 'development') {
     window.store = store
 }

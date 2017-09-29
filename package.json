@@ -15,6 +15,7 @@
     "lib-flexible": "^0.3.2",
     "mint-ui": "^2.2.9",
     "qs": "^6.5.1",
+    "socket.io": "^2.0.3",
     "vue": "^2.4.2",
     "vue-amap": "^0.3.1",
     "vue-router": "^2.7.0"

@@ -39,6 +39,7 @@
                 </div>
                 <div class="div-bgcolor " style="margin-top:0px ">
                     <div class="basic-css" @click="gototransaction()">我的交易</div>
+                    <div class="basic-css" @click="gotochart()">聊天室</div>
                     <div class="basic-css">签到有礼（暂未开通）</div>
                 </div>
                 <div class="div-bgcolor ">
@@ -112,6 +113,9 @@
             },
             gotoMessage(){
                 this.$router.push("/User/Message");
+            },
+            gotochart(){
+                this.$router.push("/User/Chart");
             }
         },
         watch: {

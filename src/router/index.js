@@ -85,6 +85,15 @@ const router = new Router({
       },
       component: resolve =>
                 require(["../containers/User/Product.vue"], resolve)
+    },
+    {
+      path: '/User/Chart',
+      name: 'userchart',
+      meta: {
+          title: "聊天室"
+      },
+      component: resolve =>
+                require(["../containers/User/Chart.vue"], resolve)
     }
   ]
 })
